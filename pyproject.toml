@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "google-scholar-mcp-server"
+version = "0.2.0"
+description = "An MCP server for searching Google Scholar publications and author profiles."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "JackKuo666" },
+]
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "mcp[cli]>=1.22.0",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+google-scholar-mcp-server = "google_scholar_mcp_server:main"
